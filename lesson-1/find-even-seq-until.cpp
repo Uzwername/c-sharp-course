@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <cstdlib>
 #include <iostream>
 
 std::string serializeIntVector(std::vector<int> ivec) {

@@ -1,4 +1,5 @@
 #include <string>
+#include <cstdlib>
 #include <iostream>
 
 std::string convertBoolToString(const bool &flag) {
