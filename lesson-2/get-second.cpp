@@ -3,7 +3,7 @@
 #include <iostream>
 
 int getSecond(const int &n) {
-  std::string numberAsString = std::to_string(n);
+  const std::string numberAsString = std::to_string(n);
 
   if (numberAsString.size() < 2) {
     return -1;

@@ -7,7 +7,7 @@ std::string serializeIntVector(std::vector<int> ivec) {
   std::string out = "";
 
   for (auto i = ivec.begin(); i != ivec.end(); i++) {
-    auto preLastIterator = ivec.end() - 1;
+    const auto preLastIterator = ivec.end() - 1;
     if (i != preLastIterator) {
       out += std::to_string(*i) + ", ";
     } else {

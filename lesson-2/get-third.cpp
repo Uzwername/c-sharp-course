@@ -3,7 +3,7 @@
 #include <iostream>
 
 int getThird(const int &n) {
-  std::string numberAsString = std::to_string(n);
+  const std::string numberAsString = std::to_string(n);
 
   if (numberAsString.size() < 3) {
     return -1;
