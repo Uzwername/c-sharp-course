@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 
-std::string serializeIntVector(std::vector<int> ivec) {
+std::string serializeIntVector(const std::vector<int> &ivec) {
   std::string out = "";
 
   const auto endIterator = ivec.cend();
@@ -19,7 +19,7 @@ std::string serializeIntVector(std::vector<int> ivec) {
   return out;
 }
 
-std::vector<int> findEvenSeqUntil(int n) {
+std::vector<int> findEvenSeqUntil(const int &n) {
   std::vector<int> evens = {};
 
   for (int i = 1; i <= n; i++) {
