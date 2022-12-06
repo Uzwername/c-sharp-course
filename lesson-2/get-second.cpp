@@ -9,7 +9,7 @@ int getSecond(const int &n) {
     return -1;
   }
 
-  std::string secondAsString(1, numberAsString[1]);
+  const std::string secondAsString(1, numberAsString[1]);
 
   return std::stoi(secondAsString);
 }

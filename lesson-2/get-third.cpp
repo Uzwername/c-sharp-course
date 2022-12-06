@@ -9,7 +9,7 @@ int getThird(const int &n) {
     return -1;
   }
 
-  std::string thirdAsString(1, numberAsString[2]);
+  const std::string thirdAsString(1, numberAsString[2]);
 
   return std::stoi(thirdAsString);
 }
