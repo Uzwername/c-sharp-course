@@ -27,7 +27,7 @@ int main() {
             << rand1 << ", "
             << rand2 << ", "
             << rand3 << ", "
-            << rand4 <<" }): "
+            << rand4 << " }): "
             << countEvens({ rand1, rand2, rand3, rand4 })
             << std::endl;
 

@@ -41,7 +41,7 @@ int main() {
             << rand2 << ", "
             << rand3 << ", "
             << rand4 << ", "
-            << rand5 <<" }): "
+            << rand5 << " }): "
             << findExtremesDifference({ rand1, rand2, rand3, rand4, rand5 })
             << std::endl;
 
