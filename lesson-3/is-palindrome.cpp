@@ -19,7 +19,7 @@ bool isPalindrome(const int &n) {
   const auto startIterator = numberAsString.cbegin();
   const auto middleIterator = startIterator + middle;
   const auto endIterator = numberAsString.cend() - 1;
-  for (auto i = startIterator; i != middleIterator; i++) {
+  for (auto i = startIterator; i != middleIterator; ++i) {
     const auto mirroredIterator = startIterator + (endIterator - i);
 
     if (*i != *mirroredIterator) {

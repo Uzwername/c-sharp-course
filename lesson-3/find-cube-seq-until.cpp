@@ -8,7 +8,7 @@ std::string serializeIntVector(const std::vector<int> &ivec) {
   std::string out = "";
 
   const auto endIterator = ivec.cend();
-  for (auto i = ivec.cbegin(); i != endIterator; i++) {
+  for (auto i = ivec.cbegin(); i != endIterator; ++i) {
     const auto preLastIterator = endIterator - 1;
     if (i != preLastIterator) {
       out += std::to_string(*i) + ", ";
@@ -23,7 +23,7 @@ std::string serializeIntVector(const std::vector<int> &ivec) {
 std::vector<int> findCubeSeqUntil(const int &n) {
   std::vector<int> cubes = {};
 
-  for (int i = 1; i <= n; i++) {
+  for (int i = 1; i <= n; ++i) {
     cubes.push_back(
       std::pow(i, 3)
     );

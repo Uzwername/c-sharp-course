@@ -4,25 +4,25 @@
 #include <iostream>
 
 std::string serializeIntVector(const std::vector<int> &ivec) {
-  std::string out = "";
+  std::string serializedSeq = "";
 
   const auto endIterator = ivec.cend();
-  for (auto i = ivec.cbegin(); i != endIterator; i++) {
-    const auto preLastIterator = endIterator - 1;
-    if (i != preLastIterator) {
-      out += std::to_string(*i) + ", ";
+  const auto lastIterator = endIterator - 1;
+  for (auto i = ivec.cbegin(); i != endIterator; ++i) {
+    if (i != lastIterator) {
+      serializedSeq += std::to_string(*i) + ", ";
     } else {
-      out += std::to_string(*i);
+      serializedSeq += std::to_string(*i);
     }
   }
 
-  return out;
+  return serializedSeq;
 }
 
 std::vector<int> findEvenSeqUntil(const int &n) {
   std::vector<int> evens = {};
 
-  for (int i = 1; i <= n; i++) {
+  for (int i = 1; i <= n; ++i) {
     if (i % 2 == 0) {
       evens.push_back(i);
     }
