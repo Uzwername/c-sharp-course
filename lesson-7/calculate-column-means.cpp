@@ -21,8 +21,8 @@ void printDoubleSeq(const std::vector<double> &seq) {
 }
 
 std::vector<double> calculateColumnMeans(const std::vector<const std::vector<double>> &matrix) {
-  // Rows aren't guaranteed to have the same length
   std::vector<double> columnSums = {};
+  // Rows aren't guaranteed to have the same size
   std::vector<unsigned> columnCounts = {};
   for (const auto &column : matrix) {
     for (unsigned i = 0; i < column.size(); ++i) {

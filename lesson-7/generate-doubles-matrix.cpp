@@ -45,7 +45,7 @@ std::vector<std::vector<double>> generateDoublesMatrix(const unsigned &rowsNumbe
 int main() {
   srand(time(0));
 
-  printDoubleSequence(generateDoublesMatrix(8, 1));
+  printDoubleSequence(generateDoublesMatrix(3, 4));
 
   return EXIT_SUCCESS;
 }
