@@ -1,4 +1,4 @@
-## Short string finder
+## Filter long strings
 
 This program filters all strings greater than 3 characters long out of a given string vector.
 
