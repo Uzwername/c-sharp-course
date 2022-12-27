@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <iostream>
 
-std::string serializeIntVector(const std::vector<std::string> &strings) {
+std::string serializeStringVector(const std::vector<std::string> &strings) {
   std::string serializedSequence = "";
 
   const auto endIterator = strings.cend();
@@ -22,7 +22,7 @@ std::string serializeIntVector(const std::vector<std::string> &strings) {
 std::vector<std::string> filterLongStrings(const std::vector<std::string> &strings) {
   std::vector<std::string> shortStrings = {};
 
-  for (const auto string : strings) {
+  for (const auto &string : strings) {
     if (string.size() <= 3) {
       shortStrings.push_back(string);
     }
@@ -32,9 +32,9 @@ std::vector<std::string> filterLongStrings(const std::vector<std::string> &strin
 }
 
 int main() {
-  std::cout << "filterLongStrings([\"hello\", \"2\", \"world\", \":-)\"]): " << serializeIntVector(filterLongStrings({ "hello", "2", "world", ":-)" })) << std::endl
-            << "filterLongStrings([\"1234\", \"1567\", \"-2\", \"computer science\"]): " << serializeIntVector(filterLongStrings({ "1234", "1567", "-2", "computer science" })) << std::endl
-            << "filterLongStrings([\"Russia\", \"Denmark\", \"Kazan\"]): " << serializeIntVector(filterLongStrings({ "Russia", "Denmark", "Kazan" })) << std::endl;
+  std::cout << "filterLongStrings([\"hello\", \"2\", \"world\", \":-)\"]): " << serializeStringVector(filterLongStrings({ "hello", "2", "world", ":-)" })) << std::endl
+            << "filterLongStrings([\"1234\", \"1567\", \"-2\", \"computer science\"]): " << serializeStringVector(filterLongStrings({ "1234", "1567", "-2", "computer science" })) << std::endl
+            << "filterLongStrings([\"Russia\", \"Denmark\", \"Kazan\"]): " << serializeStringVector(filterLongStrings({ "Russia", "Denmark", "Kazan" })) << std::endl;
 
   return EXIT_SUCCESS;
 }
